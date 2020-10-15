@@ -21,17 +21,18 @@ function main() {
     } else {
         get('encrypt').classList.remove('hidden')
     }
-    // get('encrypt-message').value = 'updateEncryptOutput';
-    // get('encrypt-password').value = 'updateEncryptOutput';
-    // updateEncryptOutput();
 }
 
+
+//
+// Decrypt
+//
 
 function updateDecryptOutput() {
     const password = get('decrypt-password').value;
     const want_hash = get('decrypt-pwhash').value;
     if (want_hash && want_hash != pwhash(password)) {
-        if (password.toLowerCase() == 'password') {
+        if (password.toLowerCase().startsWith('password')) {
             document.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // HAHA
         }
         get('decrypt-wrong-password').classList.remove('hidden');
@@ -49,6 +50,7 @@ function hidePasswordError(e) {
     if (e && e.key == "Enter") return
     get('decrypt-wrong-password').classList.add('hidden');
 }
+
 
 //
 // Encrypt
