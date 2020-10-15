@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LD47 Training Loop</title>
+    <title>Spy Earpiece</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
@@ -15,19 +15,30 @@
         <div id='loading'>
             <h2>Loading....</h2>
         </div>
-        <form class="hidden" id='encrypt'>
-            <h2>You are creating a password protected message</h2>
+
+
+        <div class="hidden" id='encrypt'>
+            <h2>You are creating a password cypher message</h2>
             <h3>Secret Message</h3>
             <textarea id="encrypt-message" rows=3></textarea>
             <h3>Password</h3>
-            <input id='encrypt-password' type="" name="">
+            <input id='encrypt-password' type="" name="" autocomplete="off">
 
             <div id='encrypt-output' class="hidden">
                 <h3>Link</h3>
                 <button id="encrypt-output-copy" type="button">Copy</button>
                  <a id='encrypt-output-link' target="_blank"></a>
             </div>
-        </form>
+        </div>
+
+        <div class="hidden" id='decrypt'>
+            <h3>Enter password to decypher message</h3>
+            <input type="password" name="" id="decrypt-password" autocomplete="off">
+            <input type="" name="" id="decrypt-cyphertext" class="hidden">
+            <input type="" name="" id="decrypt-pwhash" class="hidden">
+            <div class="error hidden" id="decrypt-wrong-password">Password doesn't seem right</div>
+            <textarea class="hidden" id="decrypt-plaintext"></textarea>
+        </div>
     </block>
 </section>
 

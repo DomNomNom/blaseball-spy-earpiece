@@ -37,9 +37,8 @@ input, textarea {
     color: #eee;
 }
 
-form textarea {
+textarea {
   width: 100%
-
 }
 
 h1 {
@@ -61,4 +60,8 @@ form h3 {
   margin-top: 2px;
 
   font-family: monospace;
+}
+
+.error {
+  color: red;
 }
