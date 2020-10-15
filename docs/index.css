@@ -1,0 +1,65 @@
+body {
+    background-color: #222;
+    /*background-color: #aaa;*/
+    color: #eee;
+}
+
+
+#block-container {
+  background-size: cover;
+  /*border: 2px;*/
+
+  padding: 2rem 1rem;
+
+  /* Grid styles */
+  display: grid;
+  align-items: center;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+block {
+    border-radius: 5px;
+    background-color: #333;
+    /*display: inline;*/
+    padding: 1rem;
+}
+
+block > h2, block > h1 {
+    margin-top: 0;
+}
+
+.title-screen h1 {
+    font-size: 3em;
+}
+.title-screen pre {
+    font-size: 1.5em;
+}
+
+a {
+    color: #88f;
+}
+
+.params input {
+    width: 100px;
+}
+.params input.invalid {
+    background-color: #eaa;
+}
+.params .label {
+    text-align: right;
+}
+/*.params form {
+    text-align: right;
+}
+.params label, .params input {
+    display: inline-block;
+        text-align: right;
+
+}*/
+
+/*
+svg {
+    will-change: contents;
+}
+*/
