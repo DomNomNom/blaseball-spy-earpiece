@@ -36,14 +36,13 @@ function updateDecryptOutput() {
             document.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // HAHA
         }
         get('decrypt-wrong-password').classList.remove('hidden');
-        get('decrypt-plaintext').classList.add('hidden')
+        get('decrypt-plaintext-container').classList.add('hidden')
         return
     }
     hidePasswordError();
-    const plain_textarea = get('decrypt-plaintext');
-    plain_textarea.classList.remove('hidden');
+    get('decrypt-plaintext-container').classList.remove('hidden');
     const plaintext = CryptoJS.AES.decrypt(get('decrypt-cyphertext').value, password).toString(CryptoJS.enc.Utf8);
-    plain_textarea.textContent = plaintext;
+    get('decrypt-plaintext').textContent = plaintext;
 }
 
 function hidePasswordError(e) {
