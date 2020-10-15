@@ -4,6 +4,9 @@ body {
     color: #eee;
 }
 
+.hidden {
+  display: none;
+}
 
 #block-container {
   background-size: cover;
@@ -29,10 +32,20 @@ block > h2, block > h1 {
     margin-top: 0;
 }
 
-.title-screen h1 {
+input, textarea {
+    background-color: #222;
+    color: #eee;
+}
+
+form textarea {
+  width: 100%
+
+}
+
+h1 {
     font-size: 3em;
 }
-.title-screen pre {
+pre {
     font-size: 1.5em;
 }
 
@@ -40,26 +53,12 @@ a {
     color: #88f;
 }
 
-.params input {
-    width: 100px;
+form h3 {
+  margin-bottom: 2px;
 }
-.params input.invalid {
-    background-color: #eaa;
-}
-.params .label {
-    text-align: right;
-}
-/*.params form {
-    text-align: right;
-}
-.params label, .params input {
-    display: inline-block;
-        text-align: right;
 
-}*/
+#encrypt-output-link {
+  margin-top: 2px;
 
-/*
-svg {
-    will-change: contents;
+  font-family: monospace;
 }
-*/

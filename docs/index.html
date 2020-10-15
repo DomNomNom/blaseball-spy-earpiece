@@ -9,12 +9,25 @@
 <section id="block-container">
     <block>
         <noscript>
-            <h1>This game required Javascript.</h1>
+            <h1>This tool requires Javascript.</h1>
         </noscript>
-        <div id='main'>
-            <h1>Welcome to The spy earpiece!</h1>
+        <h1>Welcome to The Spy Earpiece<a href="https://blaseball.fandom.com/wiki/Houston_Spies">.</a></h1>
+        <div id='loading'>
             <h2>Loading....</h2>
         </div>
+        <form class="hidden" id='encrypt'>
+            <h2>You are creating a password protected message</h2>
+            <h3>Secret Message</h3>
+            <textarea id="encrypt-message" rows=3></textarea>
+            <h3>Password</h3>
+            <input id='encrypt-password' type="" name="">
+
+            <div id='encrypt-output' class="hidden">
+                <h3>Link</h3>
+                <button id="encrypt-output-copy" type="button">Copy</button>
+                 <a id='encrypt-output-link' target="_blank"></a>
+            </div>
+        </form>
     </block>
 </section>
 
